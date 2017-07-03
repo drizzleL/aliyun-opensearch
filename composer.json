@@ -1,14 +1,14 @@
 {
-    "name": "orzcc/aliyun-opensearch",
+    "name": "drizzlel/aliyun-opensearch",
     "type": "library",
     "description": "Aliyun open search for Laravel5",
     "keywords": ["aliyun", "opensearch", "laravel"],
-    "homepage": "https://github.com/orzcc/aliyun-opensearch",
+    "homepage": "https://github.com/drizzleL/aliyun-opensearch",
     "license": "MIT",
     "authors": [
         {
-            "name": "orzcc",
-            "email": "orzcczh@gmail.com"
+            "name": "drizzleL",
+            "email": "lxy1990@gmail.com"
         }
     ],
     "require": {

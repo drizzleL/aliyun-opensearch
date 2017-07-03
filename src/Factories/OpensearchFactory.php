@@ -35,7 +35,9 @@ class OpensearchFactory
             || !array_key_exists('app', $config)) {
             throw new \InvalidArgumentException('The opensearch client requires authentication.');
         }
-        return array_only($config, ['client_id', 'client_secret', 'host', 'app', 'format']);
+        $configs = array_only($config, ['client_id', 'client_secret', 'host', 'app', 'format']);
+        $configs['host'] = ['host' => $config['host']];
+        return $configs;
     }
 
     /**
@@ -47,9 +49,9 @@ class OpensearchFactory
      */
     protected function getClient(array $config)
     {
-        $client = new CloudsearchClient( 
-            $config['client_id'], 
-            $config['client_secret'], 
+        $client = new CloudsearchClient(
+            $config['client_id'],
+            $config['client_secret'],
             $config['host'],
             'aliyun'
         );
